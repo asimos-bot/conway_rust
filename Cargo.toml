@@ -1,0 +1,17 @@
+[package]
+name = "conway"
+version = "0.1.0"
+authors = ["asimos-bot <felipe.asimos@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# tricks from https://github.com/johnthagen/min-sized-rust
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+panic = "abort"
+lto = true
+
+[dependencies]
